@@ -4,13 +4,11 @@
 //
 // 执行 `rustlings hint lifetimes2` 或在观察模式下使用 `hint` 子命令来获取提示。
 
-// I AM NOT DONE
-
-fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
+fn longest<'a,'b>(x: &'a str, y: &'b str) -> String {
     if x.len() > y.len() {
-        x
+        x.into()
     } else {
-        y
+        y.into()
     }
 }
 
